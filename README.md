@@ -77,3 +77,7 @@ The project includes utilities for evaluating QA performance using F1 and Exact 
 ---
 
 For further details, explore the code in the respective directories and files.
+
+## Acknowledgments
+
+This project benefited from assistance and code suggestions provided by ChatGPT.
