@@ -1,0 +1,28 @@
+# Model + tokenizer
+model_name: "emilyalsentzer/Bio_ClinicalBERT"
+
+# Data paths
+data_path_synthea: "data/raw/synthea/synthea_qa.jsonl"
+data_path_mimic: "data/raw/mimic/generated_qa_examples_100.jsonl"
+data_path_mimic_2: "data/raw/mimic/merged_generated_qa_v2.jsonl"
+data_path_radiology: "data/raw/radiology/generated_radiology_qa_400.jsonl"
+data_path_old: "data/processed/combined_train_dataset.pt"
+data_path_new: "data/processed/combined_train_dataset_v2.pt"
+
+# Tokenization
+max_length: 384
+doc_stride: 128
+
+# Training hyperparameters
+output_dir: "models/clinicalbert-qa-mixed-v3"
+learning_rate: 2e-5
+num_train_epochs: 3
+per_device_train_batch_size: 16
+per_device_eval_batch_size: 16
+weight_decay: 0.01
+logging_steps: 50
+save_total_limit: 1
+
+# Reporting / misc
+logging_dir: "models/clinicalbert-qa-mixed-v3/logs"
+report_to: "tensorboard"
